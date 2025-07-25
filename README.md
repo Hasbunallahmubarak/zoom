@@ -31,7 +31,7 @@ This project restructures an existing website @zoomlifestlye to a more visually 
 
 ## Demo
 
-You can view the live demo of the application at [Contact Card by Hmabiola](https://hmabiola-contactcard.netlify.app/).
+You can view the live demo of the application at [Zoom Lifestyle](https://hmabiola-contactcard.netlify.app/).
 
 ## Installation
 
@@ -39,11 +39,11 @@ To get started with this project, follow these steps:
 
 1. Clone the repository:
  ```  bash
-   git clone https://github.com/Hasbunallahmubarak/contact-cards.git
+   git clone https://github.com/Hasbunallahmubarak/zoom.git
   ``` 
 2. Move into the cloned repository:
    ``` bash
-      cd contact-cards
+      cd zoom
    ```
 3. install all dependencies:
  ```  bash

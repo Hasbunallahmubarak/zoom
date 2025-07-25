@@ -70,5 +70,6 @@ export const details = [
       "Reggae",
       "Rock",
     ],
+    video: ["Dance Video", "Music Video", "Sport Video"],
   },
 ];

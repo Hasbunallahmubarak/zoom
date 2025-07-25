@@ -14,7 +14,7 @@ const Countdown = () => {
     let intervalId = setInterval(() => {
       const currentDate = new Date();
       let targetDate = new Date("Dec 07 2025 11:59:59");
-      let difference: number = Number(targetDate - currentDate);
+      let difference: number = Number(Number(targetDate) - Number(currentDate));
 
       if (difference <= 0) {
         // Optional: handle countdown finished

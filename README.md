@@ -29,7 +29,7 @@ This project restructures an existing website @zoomlifestlye to a more visually 
 
 ## Demo
 
-You can view the live demo of the application at [Zoom Lifestyle](https://hmabiola-contactcard.netlify.app/).
+You can view the live demo of the application at [Zoom Lifestyle](https://zoomlife.netlify.app/).
 
 ## Installation
 

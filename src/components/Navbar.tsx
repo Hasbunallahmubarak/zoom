@@ -24,24 +24,34 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100  rounded-box z-1 mt-3 p-2 shadow"
+              className="menu menu-sm w-50 dropdown-content bg-base-100  rounded-box z-1 mt-3 p-2 shadow"
             >
-              <li>
-                <Link to={""}>Item 1</Link>
+              <li className="p-1">
+                <Link to={"/"}>Homepage</Link>
               </li>
-              <li>
-                <Link to={""}>Parent</Link>
+              <li className="p-1">
+                <Link to={""}>Zoom Nation</Link>
                 <ul className="p-2">
-                  <li>
-                    <Link to={""}>Submenu 1</Link>
+                  <li className="p-1">
+                    <Link to={"https://www.zoomlifestyle.com/hunt/"}>
+                      Treasure Hunt
+                    </Link>
                   </li>
-                  <li>
-                    <Link to={""}>Submenu 2</Link>
+                  <li className="p-1">
+                    <Link to={"https://trivia.zoomlifestyle.com/"}>
+                      Zoom Trivia
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li>
-                <Link to={""}>Item 3</Link>
+              <li className="p-1">
+                <Link to={"/upload"}>Upload</Link>
+              </li>
+              <li className="p-1">
+                <Link to={"/faqs"}>FAQS</Link>
+              </li>
+              <li className="p-1">
+                <Link to={"/contact"}>Contact Us</Link>
               </li>
             </ul>
           </div>

@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+Welcome to the Zoom Lifestyle project by Hmabiola!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project restructures an existing website @zoomlifestlye to a more visually appealing version using modern framework and libraries. It is now built with React.js and subordinating libraries (Daisy UI, Pace UI and tailwind CSS). It comprises 4 webpages, namely: Homepage, which is the landing page, Frequently asked questions (FAQs page), upload page, which provides users means to upload media files to the platform and lastly, contact page. Each page is structured to consist of a uniform nav-bar comprising application's logo, navigation links and buttons.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- It features a slide in and out hero section immediately after the nav-bar at the homepage and nav bar is available on all pages, providing seamless navigation.
+- Offers intuitiveness, offering daytime and nighttime toggle effect, providing users full capability to determine preference to screen display, enhancing users engagement and better experience.
+- features a countdown show, which gets user more fascinated.
+- Responsive design for mobile and desktop displays.
+- features associated partners logo, dynamically rendered via a module for scalability, as content renders based on modules content.
+- In the FAQs page, question and answers are dynamically rendered on the website, importing it's content from a module, providing room for scalability in a seamless manner.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies used:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - A superset of JavaScript that adds static types.
+- [Vite](https://vitejs.dev) - A fast and light weight platform to setup the configurations file and react development envirionment in a whole.
+- [CSS/Styled Components](https://styled-components.com/) - For styling the components
+- [Node package manager, NPM](https://nodejs.org/en)- Allow the use of npm commands, run the development arena.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Demo
+
+You can view the live demo of the application at [Zoom Lifestyle](https://hmabiola-contactcard.netlify.app/).
+
+## Installation
+
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+
+```bash
+  git clone https://github.com/Hasbunallahmubarak/zoom.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Move into the cloned repository:
+   ```bash
+      cd zoom
+   ```
+3. install all dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+     npm install
 ```

@@ -4,7 +4,7 @@ const FAQS = () => {
   const faqs = details[0].faqs;
   // console.log(Array.isArray(faqs[1].reply));
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="bg-base-200 p-10 text-center">
         <h1 className="text-3xl font-bold  opacity-70">
           Questions? Look here.
@@ -19,8 +19,8 @@ const FAQS = () => {
           </a>
         </p>
       </div>
-      <div className=" w-300 mx-auto text-center ">
-        <div className="join join-vertical bg-base-100 max-w-3/5 p-5">
+      <div className=" max-w-300 mx-auto text-center ">
+        <div className="join join-vertical bg-base-100 md:max-w-3/5 p-5">
           {faqs.map((item, index) => (
             <div className="collapse collapse-arrow join-item p-3 border-b-base-300 border-b">
               <input

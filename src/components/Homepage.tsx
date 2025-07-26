@@ -12,7 +12,7 @@ const Homepage = () => {
   return (
     <div>
       <Hero />
-      <section className="border-y-1 border-gray-400 my-10">
+      <section className="border-t-1 border-gray-400 my-10">
         <Partners />
       </section>
     </div>

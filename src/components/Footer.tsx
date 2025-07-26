@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer sm:footer-horizontal bg-base-100  md:max-w-5/6 mx-auto items-center p-4">
+      <footer className="footer sm:footer-horizontal w-full bg-base-200 px-[10%]  md:max-w-full mx-auto items-center py-10">
         <aside className="grid-flow-col items-center">
           <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
         </aside>

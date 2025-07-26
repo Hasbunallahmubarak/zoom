@@ -16,6 +16,10 @@ const Contact = () => {
     });
   };
   console.log(formData);
+  function handleSubmit(e: any) {
+    e.preventDefault();
+    console.log(formData);
+  }
   return (
     <div>
       <div>
@@ -31,39 +35,50 @@ const Contact = () => {
             </a>
           </p>
         </div>
-        <div className="select-none grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <form>
-            <input
-              type="text"
-              placeholder="Your Name*"
-              required
-              name="name"
-              value={formData.name}
-              onChange={() => handleChange(event)}
-            ></input>
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              name="email"
-              value={formData.email}
-              onChange={() => handleChange(event)}
-            ></input>
-            <input
-              type="email"
-              placeholder="Mobile Number*"
-              required
-              name="phone_number"
-              value={formData.phone_number}
-              onChange={() => handleChange(event)}
-            ></input>
-            <textarea
-              name="message"
-              required
-              placeholder="Your Message*"
-              onChange={() => handleChange(event)}
-            ></textarea>
-          </form>
+        <div className="bg-[url(https://www.zoomlifestyle.com/images/pattern.png)]bg-cover p-5 w-full h-auto overflow-hidden">
+          <div className="select-none md:max-w-2/5 mx-auto text-center ">
+            <form>
+              <input
+                type="text"
+                placeholder="Your Name*"
+                required
+                className="w-full mt-5 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0"
+                name="name"
+                value={formData.name}
+                onChange={() => handleChange(event)}
+              ></input>
+              <input
+                type="email"
+                placeholder="Email*"
+                required
+                className="w-full mt-5 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0"
+                name="email"
+                value={formData.email}
+                onChange={() => handleChange(event)}
+              ></input>
+              <input
+                type="email"
+                placeholder="Mobile Number*"
+                required
+                className="w-full mt-5 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0"
+                name="phone_number"
+                value={formData.phone_number}
+                onChange={() => handleChange(event)}
+              ></input>
+              <textarea
+                name="message"
+                required
+                className="w-full mt-5 px-5 resize-none h-40 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0"
+                placeholder="Your Message*"
+                onChange={() => handleChange(event)}
+              ></textarea>
+              <input
+                type="submit"
+                onSubmit={() => handleSubmit(event)}
+                className="w-full my-5 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0"
+              />
+            </form>
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import Countdown from "./Countdown";
 const Hero = () => {
   return (
     <div>
-      <div className="carousel w-full overflow-hidden max-h-100">
+      <div className="carousel w-full overflow-hidden h-70">
         <div id="slide1" className="carousel-item relative w-full h-full">
           <img
             src="https://www.zoomlifestyle.com/images/boost-your-chances.jpg"

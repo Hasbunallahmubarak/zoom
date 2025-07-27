@@ -4,10 +4,9 @@ import { details } from "../zoom";
 const Video = () => {
   const video = details[0].video;
   const [formData, setFormData] = useState({
-    // image: dummyImage,
     name: "",
-
-    email: "",
+    url: "",
+    title: "",
     phone_number: "",
     video: "",
   });
@@ -17,7 +16,10 @@ const Video = () => {
       return { ...prevFormData, [name]: value };
     });
   };
-  console.log(formData);
+  function handleSubmit(e: any) {
+    e.preventDefault();
+    console.log(formData);
+  }
   return (
     <div>
       <form>
@@ -30,17 +32,9 @@ const Video = () => {
           onChange={() => handleChange(event)}
           className="w-full mt-3 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0 "
         ></input>
+
         <input
-          type="email"
-          placeholder="Email"
-          required
-          name="email"
-          value={formData.email}
-          onChange={() => handleChange(event)}
-          className="w-full mt-3 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0 "
-        ></input>
-        <input
-          type="email"
+          type="text"
           placeholder="Mobile Number*"
           required
           name="phone_number"
@@ -49,7 +43,7 @@ const Video = () => {
           className="w-full mt-3 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0 "
         ></input>
         <select
-          className="select validator w-full opacity-80 my-3 "
+          className="select validator w-full border-1 border-base-300 outline-0 opacity-80 my-3  "
           name="video"
           required
           onChange={() => handleChange(event)}
@@ -61,6 +55,15 @@ const Video = () => {
             <option className="border-0 outline-0">{genre}</option>
           ))}
         </select>
+        <input
+          type="text"
+          placeholder="Video Title*"
+          required
+          name="title"
+          value={formData.title}
+          onChange={() => handleChange(event)}
+          className="w-full mt-3 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0 "
+        ></input>
         <textarea
           name="message"
           required
@@ -68,6 +71,21 @@ const Video = () => {
           onChange={() => handleChange(event)}
           className="w-full resize-none h-30 mt-3 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0 "
         ></textarea>
+        <input
+          type="url"
+          placeholder="Youtube Url*"
+          required
+          name="url"
+          value={formData.url}
+          onChange={() => handleChange(event)}
+          className="w-full mt-3 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0 "
+        ></input>
+        <input
+          type="submit"
+          placeholder="Upload Video Plan"
+          onSubmit={() => handleSubmit(event)}
+          className="w-full my-5 px-5 py-3 border-1 border-base-300 opacity-80 bg-error outline-0"
+        />
       </form>
     </div>
   );

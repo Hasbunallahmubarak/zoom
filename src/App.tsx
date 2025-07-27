@@ -8,6 +8,7 @@ import { useState } from "react";
 import Upload from "./Upload";
 import FAQS from "./FAQS";
 import Contact from "./Contact";
+import Zoom from "./components/Zoom";
 // import Toggler from "./components/Toggler";
 // import "@theme-toggles/react/css/Expand.css";
 // import { Expand } from "@theme-toggles/react";
@@ -43,7 +44,7 @@ function App() {
           <Route path="/upload" element={<Upload />} />
           <Route path="/faqs" element={<FAQS />} />
           <Route path="/contact" element={<Contact />} />
-          {/*<Route path="/tailwind" element={<Tailwind />} /> */}
+          <Route path="/login" element={<Zoom />} />
           {/* <Route path="/*" element={<PageNotFound />} /> */}
         </Routes>
         <Footer />

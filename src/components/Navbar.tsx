@@ -30,7 +30,7 @@ const Navbar = () => {
                 <Link to={"/"}>Homepage</Link>
               </li>
               <li className="p-1">
-                <Link to={""}>Zoom Nation</Link>
+                <Link to={"/login"}>Zoom Nation</Link>
                 <ul className="p-2">
                   <li className="p-1">
                     <Link to={"https://www.zoomlifestyle.com/hunt/"}>
@@ -69,7 +69,9 @@ const Navbar = () => {
             </li>
             <li>
               <details>
-                <summary>Zoom Nation</summary>
+                <summary>
+                  <Link to={"/login"}>Zoom Nation</Link>{" "}
+                </summary>
                 <ul className="p-2 w-40 z-[-1]">
                   <li>
                     <Link to={"https://www.zoomlifestyle.com/hunt/"}>
@@ -77,7 +79,9 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to={"trivia"}>Zoom Trivia</Link>
+                    <Link to={"https://trivia.zoomlifestyle.com/"}>
+                      Zoom Trivia
+                    </Link>
                   </li>
                 </ul>
               </details>

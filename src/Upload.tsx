@@ -1,6 +1,14 @@
+import Business from "./components/Bussiness";
 import Music from "./components/Music";
 import Video from "./components/Video";
+import { useState } from "react";
+
 const Upload = () => {
+  const [currentTab, setCurrentTab] = useState(false);
+  function currentTabFunc(event: any) {
+    setCurrentTab((prevValue) => !prevValue);
+    console.log(event.target);
+  }
   return (
     <div className="max-w-5/6 mx-auto text-center py-10">
       <h3 className="text-lg letter tracking-wider font-light">
@@ -14,7 +22,10 @@ const Upload = () => {
         <input
           type="radio"
           name="tab"
-          className="tab w-1/3 hover:bg-error "
+          onClick={() => currentTabFunc(event)}
+          className={`tab w-1/3 bg-base-100 hover:bg-error ${
+            currentTab && "bg-error"
+          }`}
           aria-label="Music"
           // checked
         />
@@ -25,7 +36,8 @@ const Upload = () => {
         <input
           type="radio"
           name="tab"
-          className={`tab w-1/3 hover:bg-error `}
+          onClick={() => currentTabFunc(event)}
+          className={`tab w-1/3 hover:bg-error ${currentTab && "bg-error"} `}
           aria-label="Video"
           defaultChecked
         />
@@ -36,12 +48,13 @@ const Upload = () => {
         <input
           type="radio"
           name="tab"
-          className={`tab w-1/3 hover:bg-error `}
+          onClick={() => currentTabFunc(event)}
+          className={`tab w-1/3 hover:bg-error ${currentTab && "bg-error"} `}
           aria-label="Business"
           // checked
         />
         <div className="tab-content bg-base-100 border-base-300 p-6">
-          Tab content 3
+          <Business />
         </div>
       </div>
     </div>

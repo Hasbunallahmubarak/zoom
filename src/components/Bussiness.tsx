@@ -1,15 +1,17 @@
 // import React from "react";
 import { useState } from "react";
 import { details } from "../zoom";
-const Music = () => {
-  const music = details[0].music;
-  const [dummymusic, setDummymusic] = useState("");
+const Business = () => {
+  const business = details[0].business;
+  const funding = details[0].funding;
+  const [dummybusiness, setDummybusiness] = useState("");
   const [formData, setFormData] = useState({
-    music: dummymusic,
+    business: dummybusiness,
     name: "",
     track_title: "",
     stage_name: "",
     phone_number: "",
+    funding: "",
   });
   const handleChange = (event: any) => {
     const { name, value } = event.target;
@@ -29,8 +31,8 @@ const Music = () => {
       reader.onloadend = () => {
         const base64String = reader.result;
         if (typeof base64String == "string") {
-          localStorage.setItem("newmusic", base64String);
-          setDummymusic(localStorage.getItem("newmusic")!);
+          localStorage.setItem("newbusiness", base64String);
+          setDummybusiness(localStorage.getItem("newbusiness")!);
         }
       };
     }
@@ -78,20 +80,38 @@ const Music = () => {
         ></input>
         <select
           className="select validator w-full border-1 border-base-300 outline-0 opacity-80 my-3 "
-          name="music"
+          name="business"
           required
           onChange={() => handleChange(event)}
         >
           <option
             disabled
             selected
-            value={formData.music}
+            value={formData.business}
             className="opacity-80"
           >
             Choose category:
           </option>
-          {music.map((genre) => (
+          {business.map((genre) => (
             <option className="">{genre}</option>
+          ))}
+        </select>
+        <select
+          className="select validator w-full border-1 border-base-300 outline-0 opacity-80 my-3 "
+          name="funding"
+          required
+          onChange={() => handleChange(event)}
+        >
+          <option
+            disabled
+            selected
+            value={formData.funding}
+            className="opacity-80"
+          >
+            Select Funding:
+          </option>
+          {funding.map((fundOption: any) => (
+            <option className="">{fundOption}</option>
           ))}
         </select>
         <textarea
@@ -103,16 +123,16 @@ const Music = () => {
         ></textarea>
         <input
           type="submit"
-          placeholder="Short Description"
+          placeholder="Upload Business Plan"
           onSubmit={() => handleSubmit(event)}
           className="w-full my-5 px-5 py-3 border-1 border-base-300 opacity-80 bg-error outline-0"
         />
         <p className="opacity-80 my-5">
-          Choose Attachment (.mp3) &nbsp;
+          Choose Attachment (.pdf) &nbsp;
           <input
             type="file"
-            name="music"
-            accept="audio/*"
+            name="business"
+            accept="pdf/*"
             onChange={() => handleChangePicture}
             className="cursor-progress"
           />
@@ -122,4 +142,4 @@ const Music = () => {
   );
 };
 
-export default Music;
+export default Business;

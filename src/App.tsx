@@ -9,6 +9,8 @@ import Upload from "./Upload";
 import FAQS from "./FAQS";
 import Contact from "./Contact";
 import Zoom from "./components/Zoom";
+import ClaimAccount from "./components/ClaimAccount";
+import Play from "./components/Play";
 // import Toggler from "./components/Toggler";
 // import "@theme-toggles/react/css/Expand.css";
 // import { Expand } from "@theme-toggles/react";
@@ -45,7 +47,8 @@ function App() {
           <Route path="/faqs" element={<FAQS />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Zoom />} />
-          {/* <Route path="/*" element={<PageNotFound />} /> */}
+          <Route path="/claim-account" element={<ClaimAccount />} />
+          <Route path="/play" element={<Play />} />
         </Routes>
         <Footer />
       </Router>
@@ -55,42 +58,11 @@ function App() {
         className="fixed right-5 bottom-10 w-15 border-error border-r-2 hover:cursor-grab active:cursor-grabbing text-2xl "
         onClick={() => handleToggleEffect()}
       />
-      {/* <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vitae ex,
-        eos totam sint itaque! Incidunt aperiam veniam voluptatibus perspiciatis
-        quas corporis ut in ipsam quasi. Voluptatem incidunt optio pariatur.
-        Cupiditate accusamus unde mollitia quod officia laboriosam
-        exercitationem fugiat minima eos quibusdam excepturi obcaecati ex,
-        delectus quos asperiores, dolore similique aperiam voluptatum
-        perspiciatis? Iure dolor nesciunt tenetur est nobis quis? Deserunt eius,
-        libero neque ipsum veniam eaque voluptate iure minima, quisquam
-        doloremque rerum aperiam perspiciatis ad! Officia, magni debitis natus
-        eveniet doloremque dolorum, repudiandae facilis recusandae dolore
-        laborum ab aspernatur. Porro et eaque cumque pariatur odio, nihil
-        nesciunt? Iure unde, expedita iste ratione placeat dicta enim odit qui
-        quasi ea distinctio adipisci quam nesciunt delectus quo et quibusdam
-        esse ducimus. Autem repellat consequatur magnam in corrupti! Ipsum
-        labore consequuntur libero culpa quidem? Iure fugiat exercitationem
-        accusamus magni, modi numquam nobis. Temporibus quam error saepe
-        explicabo accusantium, eligendi laborum ea magni. Nisi magni adipisci
-        tempore. Inventore veniam libero illo aliquam. Porro aperiam sapiente
-        quam veniam. Incidunt quam numquam distinctio nostrum quibusdam
-        excepturi doloremque odit facere, dolores voluptate magni iure atque
-        officia! Vero asperiores et odit ex ut. Voluptatum quibusdam incidunt
-        saepe sunt hic officiis provident modi error. Eius fuga dolores dolor
-        optio quaerat! Dolorem natus soluta ab dicta, odit optio eos!
-        Accusantium ducimus sapiente alias placeat cumque laborum reprehenderit
-        sequi distinctio totam, eius doloribus, velit est, pariatur tempora
-        harum minima rerum nihil voluptas. Ea recusandae perspiciatis
-        consequuntur laboriosam nobis eligendi facilis? Dolorem autem
-        exercitationem ab. Dolore minus voluptatum illo nobis. Ex, nulla
-        praesentium sed cumque explicabo aperiam, neque voluptatem veritatis
-        accusamus doloremque iure quo quibusdam voluptatum qui iste
-        necessitatibus soluta vel! Perspiciatis sit asperiores corrupti vero
-        atque cupiditate inventore accusamus enim ab ad iure, recusandae eius
-        quisquam dolorum vel quidem illo adipisci magnam quaerat? Suscipit
-        molestiae obcaecati reiciendis, eaque nihil ipsam?
-      </div> */}
+      <div
+        id="overlay"
+        className="w-full h-full fixed top-0 left-0 bg-black opacity-40 invisible"
+      ></div>
+      {/* <div className="absolute left-1/2 right-1/2 transform"></div> */}
     </div>
   );
 }

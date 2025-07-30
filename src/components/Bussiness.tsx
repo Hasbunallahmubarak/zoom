@@ -117,16 +117,10 @@ const Business = () => {
         <textarea
           name="message"
           required
-          placeholder="Your Message*"
+          placeholder="Short Description"
           onChange={() => handleChange(event)}
           className="w-full resize-none h-30 mt-3 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0 "
         ></textarea>
-        <input
-          type="submit"
-          placeholder="Upload Business Plan"
-          onSubmit={() => handleSubmit(event)}
-          className="w-full my-5 px-5 py-3 border-1 border-base-300 opacity-80 bg-error outline-0"
-        />
         <p className="opacity-80 my-5">
           Choose Attachment (.pdf) &nbsp;
           <input
@@ -137,6 +131,12 @@ const Business = () => {
             className="cursor-progress"
           />
         </p>
+        <input
+          type="submit"
+          value="Upload Business Plan"
+          onSubmit={() => handleSubmit(event)}
+          className="w-full my-5 text-white px-5 py-3 border-1 border-base-300 opacity-80 bg-error outline-0"
+        />
       </form>
     </div>
   );

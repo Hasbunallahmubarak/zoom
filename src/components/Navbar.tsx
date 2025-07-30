@@ -98,10 +98,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <Link to={""} className="btn btn-error text-base-100">
+          <Link to={"/play"} className="btn btn-error text-base-100">
             Buy Raffle
           </Link>
-          <Link to={""} className="btn btn-warning text-base-100">
+          <Link to={"/#my_modal_8"} className="btn btn-warning text-base-100">
             Sign Up
           </Link>
         </div>

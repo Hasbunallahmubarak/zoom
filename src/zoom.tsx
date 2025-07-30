@@ -131,5 +131,14 @@ export const details = [
       "500,000 - 1,000,000",
       "More than 1,000,000",
     ],
+    play1: [
+      "Music",
+      "Dance",
+      "Sport",
+      "Business",
+      "International",
+      "Zoom Raider",
+    ],
+    play2: ["Monthly", "One-time", "Yearly"],
   },
 ];

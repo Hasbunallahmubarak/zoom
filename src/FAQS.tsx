@@ -22,7 +22,10 @@ const FAQS = () => {
       <div className=" max-w-300 mx-auto text-center ">
         <div className="join join-vertical bg-base-100 md:max-w-3/5 p-5">
           {faqs.map((item, index) => (
-            <div className="collapse collapse-arrow join-item p-3 border-b-base-300 border-b">
+            <div
+              key={index}
+              className="collapse collapse-arrow join-item p-3 border-b-base-300 border-b"
+            >
               <input
                 type="radio"
                 name="my-accordion-4"

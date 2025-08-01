@@ -125,7 +125,7 @@ const Play = () => {
                   Create Account
                 </Link>
                 <Link
-                  to="/play"
+                  to="/login"
                   className="w-12/25 px-5 py-3 border-1 border-base-300 opacity-80 -error outline-0"
                 >
                   Reset Password

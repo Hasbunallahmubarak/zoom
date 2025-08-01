@@ -1,5 +1,5 @@
 // import React from "react";
-
+import { Link } from "react-router-dom";
 import Countdown from "./Countdown";
 
 const Hero = () => {
@@ -73,7 +73,9 @@ const Hero = () => {
           <h1 className="py-6 text-3xl">
             Get Your Tickets to enter the Next ₦1 MILLION Draw!
           </h1>
-          <button className="btn btn-error text-base-100">Get Started</button>
+          <Link to={"/login"} className="btn btn-error text-base-100">
+            Get Started
+          </Link>
         </div>
       </div>
     </div>

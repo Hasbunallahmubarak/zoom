@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-const Navbar = () => {
+interface Props {
+  openFunc: () => void;
+}
+const Navbar = ({ openFunc }: Props) => {
   return (
     <div>
-      <div className="navbar bg-base-100 py-3 shadow-sm md:px-20 fixed z-3 top-0">
+      <div className="navbar bg-base-100 py-3 shadow-sm md:px-20 fixed z-30 top-0">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,7 +58,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link to={"/"} className="w-25">
+          <Link to={"/"} className="md:w-25 w-20">
             <img
               src="https://www.zoomlifestyle.com/images/zoom-logo.png"
               alt=""
@@ -101,9 +104,9 @@ const Navbar = () => {
           <Link to={"/play"} className="btn btn-error text-base-100">
             Buy Raffle
           </Link>
-          <Link to={"/#my_modal_8"} className="btn btn-warning text-base-100">
+          <button className="btn btn-warning text-base-100" onClick={openFunc}>
             Sign Up
-          </Link>
+          </button>
         </div>
         {/* <Link to={} className="w-25 sm:w-18  ml-5" onClick={() => handleToggleEffect()}>
           <img src={toggle ? lightTheme : darkTheme} />

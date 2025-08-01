@@ -1,11 +1,28 @@
 // import React from "react";
 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div>
       <footer className="footer sm:footer-horizontal w-full bg-base-200 px-[10%]  md:max-w-full mx-auto items-center py-10">
-        <aside className="grid-flow-col items-center">
+        <aside className="grid-flow-row items-center">
           <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+          <div>
+            <Link
+              to={"/terms"}
+              className="text-error  uppercase font-semibold "
+            >
+              Terms and Condition
+            </Link>
+            {" | "}
+            <Link
+              to={"privacy"}
+              className="text-error  uppercase font-semibold "
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <a href="">

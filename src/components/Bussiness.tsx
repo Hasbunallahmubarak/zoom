@@ -37,7 +37,7 @@ const Business = () => {
       };
     }
   };
-  console.log(formData);
+  // console.log(formData);
   return (
     <div>
       <form>
@@ -135,7 +135,7 @@ const Business = () => {
           type="submit"
           value="Upload Business Plan"
           onSubmit={() => handleSubmit(event)}
-          className="w-full my-5 text-white px-5 py-3 border-1 border-base-300 opacity-80 bg-error outline-0"
+          className="w-full rounded active:translate-y-1 cursor-pointer my-5 text-white px-5 py-3 border-1 border-base-300 opacity-80 bg-error outline-0"
         />
       </form>
     </div>

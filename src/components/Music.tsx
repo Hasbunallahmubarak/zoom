@@ -19,7 +19,7 @@ const Music = () => {
   };
   function handleSubmit(e: any) {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
   }
   const handleChangePicture = (event: any) => {
     const file = event.target.files?.[0];
@@ -35,7 +35,7 @@ const Music = () => {
       };
     }
   };
-  console.log(formData);
+  // console.log(formData);
   return (
     <div>
       <form>
@@ -105,7 +105,7 @@ const Music = () => {
           type="submit"
           value={"Upload Music"}
           onSubmit={() => handleSubmit(event)}
-          className="w-full my-5 text-white px-5 py-3 border-1 border-base-300 opacity-80 bg-error outline-0"
+          className="w-full rounded active:translate-y-1 cursor-pointer my-5 text-white px-5 py-3 border-1 border-base-300 opacity-80 bg-error outline-0"
         />
         <p className="opacity-80 my-5">
           Choose Attachment (.mp3) &nbsp;

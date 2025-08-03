@@ -75,7 +75,7 @@ const Contact = () => {
               <input
                 type="submit"
                 onSubmit={() => handleSubmit(event)}
-                className="w-full my-5 px-5 py-3 border-1 border-base-300 opacity-80 focus:border-error outline-0"
+                className="w-full my-5 px-5 py-3 border-1 bg-error text-white rounded cursor-pointer border-base-300 opacity-80 focus:border-error outline-0"
               />
             </form>
           </div>

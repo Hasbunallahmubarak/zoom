@@ -4,10 +4,13 @@ import Video from "./components/Video";
 import { useState } from "react";
 
 const Upload = () => {
-  const [currentTab, setCurrentTab] = useState(false);
+  const [videoTab, setVideoTab] = useState(true);
+  const [musicTab, setMusicTab] = useState(false);
+  const [businessTab, setBusinessTab] = useState(false);
   function currentTabFunc(event: any) {
-    setCurrentTab((prevValue) => !prevValue);
-    console.log(event.target);
+    setVideoTab(event.target.ariaLabel === "Video" ? true : false);
+    setMusicTab(event.target.ariaLabel === "Music" ? true : false);
+    setBusinessTab(event.target.ariaLabel === "Business" ? true : false);
   }
   return (
     <div className="max-w-5/6 mx-auto text-center py-10">
@@ -23,8 +26,8 @@ const Upload = () => {
           type="radio"
           name="tab"
           onClick={() => currentTabFunc(event)}
-          className={`tab w-1/3 bg-base-100 hover:bg-error ${
-            currentTab && "bg-error"
+          className={`tab w-1/3 h-15 bg-base-100 hover:bg-error hover:text-gray-50 ${
+            musicTab && "bg-error text-white"
           }`}
           aria-label="Music"
           // checked
@@ -37,7 +40,9 @@ const Upload = () => {
           type="radio"
           name="tab"
           onClick={() => currentTabFunc(event)}
-          className={`tab w-1/3 hover:bg-error ${currentTab && "bg-error"} `}
+          className={`tab w-1/3 h-15 hover:bg-error hover:text-gray-50 ${
+            videoTab && "bg-error text-white"
+          } `}
           aria-label="Video"
           defaultChecked
         />
@@ -49,7 +54,9 @@ const Upload = () => {
           type="radio"
           name="tab"
           onClick={() => currentTabFunc(event)}
-          className={`tab w-1/3 hover:bg-error ${currentTab && "bg-error"} `}
+          className={`tab w-1/3 h-15 hover:bg-error hover:text-gray-50  ${
+            businessTab && "bg-error text-white"
+          } `}
           aria-label="Business"
           // checked
         />

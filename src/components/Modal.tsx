@@ -106,7 +106,7 @@ export default function Example({ open, openFunc, closeFunc }: Props) {
                   ></a>
                 </div>
                 <p className="opacity-90 text-sm my-3 text-center">
-                  Paid but have no account{"? "}
+                  Paid, but have no account{"? "}
                   <a
                     className="underline text-secondary cursor-pointer "
                     href="https://zoomlife.netlify.app/claim-account"
